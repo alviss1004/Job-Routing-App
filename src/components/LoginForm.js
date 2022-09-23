@@ -35,7 +35,6 @@ function LoginForm({ callback }) {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    bgcolor: "background.paper",
     boxShadow: 24,
   };
 
@@ -80,19 +79,14 @@ function LoginForm({ callback }) {
               <Alert severity="error">{errors.afterSubmit.message}</Alert>
             )}
 
-            <TextField
-              required
-              label="Email Address"
-              default={email}
-              value={email}
-              fullWidth
-            />
+            <TextField required label="Email Address" value={email} fullWidth />
 
             <TextField
               required
               label="Password"
               type={showPassword ? "text" : "password"}
               fullWidth
+              defaultValue={password}
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">

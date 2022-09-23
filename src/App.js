@@ -3,8 +3,6 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import JobDetailModal from "./components/JobDetailModal";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
-import { useContext } from "react";
-import AuthContext from "./auth/AuthContext";
 import RequireAuth from "./auth/RequireAuth";
 import LoginModal from "./components/LoginModal";
 import Layout from "./pages/Layout";
@@ -12,7 +10,6 @@ import AuthProvider from "./auth/AuthProvider";
 
 function App() {
   const location = useLocation();
-  const auth = useContext(AuthContext);
   let state = location.state;
   return (
     <>
