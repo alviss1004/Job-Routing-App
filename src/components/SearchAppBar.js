@@ -172,7 +172,8 @@ export default function PrimarySearchAppBar() {
               </>
             ) : (
               <Button
-                onClick={() => navigate("/login")}
+                component={Link}
+                to={`/login`}
                 state={{ backgroundLocation: location }}
                 color="inherit"
               >

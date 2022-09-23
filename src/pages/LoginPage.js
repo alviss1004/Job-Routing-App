@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import LoginForm from "../components/LoginForm";
 import Stack from "@mui/material/Stack";
 
-function LoginPage() {
+function Login() {
   let navigate = useNavigate();
   let from = navigate.state?.from?.pathname || "/";
 
@@ -17,4 +17,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default Login;

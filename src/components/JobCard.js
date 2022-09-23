@@ -23,8 +23,9 @@ export default function JobCard({ job }) {
         </Typography>
         <Divider />
         <Stack direction="row" spacing={1} sx={{ my: 1 }}>
-          {job.skills.slice(0, 4).map((skill) => (
+          {job.skills.slice(0, 4).map((skill, i) => (
             <Chip
+              key={i}
               label={skill}
               size="small"
               sx={{
